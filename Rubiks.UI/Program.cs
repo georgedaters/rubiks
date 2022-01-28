@@ -8,7 +8,7 @@ namespace Rubiks.UI
         static void Main(string[] args)
         {
             var cube = Cube.Default;
-            TTCScenario1.Run(cube);
+            CustomScenario1.Run(cube);
             new ExplodedCubePrinter().Print(cube);
 
             Console.ReadKey(true);

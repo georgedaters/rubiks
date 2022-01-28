@@ -8,10 +8,10 @@ namespace Rubiks.Tests
     public class ScenarioTests
     {
         [TestMethod]
-        public void TTCScenario()
+        public void CustomScenario1()
         {
             var cube = Cube.Default;
-            TTCScenario1.Run(cube);
+            Scenarios.CustomScenario1.Run(cube);
 
             // Front
             cube.Cubies[0, 0, 0][Face.Front].Should().Be(FaceColour.White);

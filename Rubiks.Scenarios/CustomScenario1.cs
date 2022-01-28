@@ -1,6 +1,6 @@
 ﻿namespace Rubiks.Scenarios
 {
-    public static class TTCScenario1
+    public static class CustomScenario1
     {
         public static void Run(Cube cube)
         {
