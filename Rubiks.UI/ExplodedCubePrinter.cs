@@ -23,13 +23,27 @@ namespace Rubiks.UI
         /// <param name="cube"></param>
         public void Print(Cube cube)
         {
-            Console.Clear();
-            PrintFront(cube);
-            PrintUp(cube);
-            PrintLeft(cube);
-            PrintRight(cube);
-            PrintBack(cube);
-            PrintDown(cube);
+            var initialConsoleColor = Console.ForegroundColor;
+
+            try
+            {
+                Console.Clear();
+                PrintFront(cube);
+                PrintUp(cube);
+                PrintLeft(cube);
+                PrintRight(cube);
+                PrintBack(cube);
+                PrintDown(cube);
+            }
+            catch
+            {
+                Console.ForegroundColor = initialConsoleColor;
+                throw;
+            }
+            finally
+            {
+                Console.ForegroundColor = initialConsoleColor;
+            }
         }
 
         private void PrintFront(Cube cube)
