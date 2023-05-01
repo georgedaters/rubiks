@@ -5,7 +5,7 @@
     /// </summary>
     public class Cube
     {
-        public Orientation[,,] Cubies = new Orientation[3, 3, 3];
+        public Cubie[,,] Cubies = new Cubie[3, 3, 3];
 
         /// <summary>
         /// Gets a cube instance with the default orientation (white up, green front)
@@ -21,7 +21,7 @@
                     {
                         for (int z = 0; z < 3; z++)
                         {
-                            cube.Cubies[x, y, z] = Orientation.Default;
+                            cube.Cubies[x, y, z] = Cubie.Default;
                         }
                     }
                 }

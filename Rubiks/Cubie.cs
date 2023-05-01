@@ -5,7 +5,7 @@ namespace Rubiks
     /// <summary>
     /// Defines the orientation of a cubie
     /// </summary>
-    public class Orientation
+    public class Cubie
     {
         /// <summary>
         /// Defines the colours on each side of the cubie. The colour is a value from <see cref="FaceColour"/> indexed by a value from <see cref="Face"/>
@@ -23,9 +23,9 @@ namespace Rubiks
             set { this.Sides[i] = value; }
         }
 
-        public Orientation Copy()
+        public Cubie Copy()
         {
-            var copy = new Orientation();
+            var copy = new Cubie();
             for (int i = 0; i < 6; i++)
             {
                 copy[i] = this[i];
@@ -37,7 +37,7 @@ namespace Rubiks
         /// <summary>
         /// Gets a new instance with the white up and green front 
         /// </summary>
-        public static Orientation Default => new Orientation
+        public static Cubie Default => new Cubie
         {
             Sides = Enumerable.Range(0, 6).ToArray()
         };

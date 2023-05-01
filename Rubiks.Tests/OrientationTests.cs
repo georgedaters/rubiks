@@ -9,7 +9,7 @@ namespace Rubiks.Tests
         [TestMethod]
         public void CanRotateAroundXAxis()
         {
-            var orientation = Orientation.Default;
+            var orientation = Cubie.Default;
             orientation.RotateAroundXAxis();
 
             orientation[Face.Up].Should().Be(FaceColour.Green);
@@ -24,7 +24,7 @@ namespace Rubiks.Tests
         [TestMethod]
         public void CanRotateAroundXAxisInverse()
         {
-            var orientation = Orientation.Default;
+            var orientation = Cubie.Default;
             orientation.RotateAroundXAxisInverse();
 
             orientation[Face.Up].Should().Be(FaceColour.Blue);
@@ -39,7 +39,7 @@ namespace Rubiks.Tests
         [TestMethod]
         public void CanRotateAroundYAxis()
         {
-            var orientation = Orientation.Default;
+            var orientation = Cubie.Default;
             orientation.RotateAroundYAxis();
 
             orientation[Face.Front].Should().Be(FaceColour.Red);
@@ -54,7 +54,7 @@ namespace Rubiks.Tests
         [TestMethod]
         public void CanRotateAroundYAxisInverse()
         {
-            var orientation = Orientation.Default;
+            var orientation = Cubie.Default;
             orientation.RotateAroundYAxisInverse();
 
             orientation[Face.Front].Should().Be(FaceColour.Orange);
@@ -69,7 +69,7 @@ namespace Rubiks.Tests
         [TestMethod]
         public void CanRotateAroundZAxis()
         {
-            var orientation = Orientation.Default;
+            var orientation = Cubie.Default;
             orientation.RotateAroundZAxis();
 
             orientation[Face.Up].Should().Be(FaceColour.Orange);
@@ -84,7 +84,7 @@ namespace Rubiks.Tests
         [TestMethod]
         public void CanRotateAroundZAxisInverse()
         {
-            var orientation = Orientation.Default;
+            var orientation = Cubie.Default;
             orientation.RotateAroundZAxisInverse();
 
             orientation[Face.Up].Should().Be(FaceColour.Red);
