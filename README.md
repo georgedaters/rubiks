@@ -81,4 +81,5 @@ new ExplodedCubePrinter().Print(cube);
 With working directory being the folder containing this Readme, run either the following:
 
 dotnet run --project Rubiks.UI 
-dotnet te
+
+dotnet test --project Rubiks.Tests
